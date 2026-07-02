@@ -32,8 +32,6 @@ Spark's seeds : à venir
 Et peut-être une page de bordel Prima materia. J'aime le bordel :D
 Donc ça ce serait la page studio et ensuite chaque jeu a un site perso avec son style
 
-Quelque chose autour de l'expérience ALICE au cern
-
 Pitch
 🜂 The Human model : Surviving Capitalism, One Card at a Time
 🜂 Xenoarchaeology Internship
