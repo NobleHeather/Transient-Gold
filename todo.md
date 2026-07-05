@@ -7,7 +7,11 @@ Donner un nom plus génériques aux css des cards de projet (utilisé dans la pa
 
 <!--+ next -->
 
+VERSION TEL
+page note, largeur archive + mettre les dialogues en <q> ou autre et indentation
+page note article craft : link & style les signatures
 favicon
+régler ce qui s'affiche quand on partage sur whatsapp etc
 Régler tailles des textes
 Logo animé au changement de page ?
 Equipe avec motto
