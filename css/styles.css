@@ -1,0 +1,285 @@
+/* ========================================
+   VARIABLES
+   ======================================== */
+
+:root {
+    --black: #050505;
+    --white: #f7f3ea;
+    --muted: #b8b0a2;
+
+    --gold-dark: #7a5a18;
+    --gold: #c9a646;
+    --gold-light: #f4df9b;
+    --gold-white: #fff6cf;
+
+    --bg: rgba(247, 243, 234, 0.08);
+
+    --font-body: "Inter", sans-serif;
+    --font-title: "Cormorant Garamond", serif;
+}
+
+/* ========================================
+   RESET & TYPOGRAPHY
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background: var(--black);
+    color: var(--white);
+
+    font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-title);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+.site-header {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 1.25rem 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(5, 5, 5, 0.72);
+    backdrop-filter: blur(12px);
+}
+
+.site-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+
+    color: var(--white);
+    text-decoration: none;
+}
+
+.site-logo {
+    display: block;
+    flex-shrink: 0;
+
+    width: 3rem;
+    height: 3rem;
+}
+
+.site-title {
+    font-family: var(--font-title);
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.site-nav {
+    display: flex;
+    gap: 1.5rem;
+
+    color: var(--muted);
+    font-size: 1.3rem;
+}
+
+.site-nav a {
+    transition:
+        color 180ms ease,
+        text-shadow 180ms ease;
+}
+
+.site-nav a:hover {
+    color: var(--white);
+    text-shadow: 0 0 14px rgba(244, 223, 155, 0.35);
+}
+
+/* ========================================
+   GOLD EFFECT
+   ======================================== */
+
+.gold-text {
+    background: linear-gradient(
+        115deg,
+        var(--gold-dark) 0%,
+        var(--gold) 28%,
+        var(--gold-white) 45%,
+        var(--gold-light) 52%,
+        var(--gold) 68%,
+        var(--gold-dark) 100%
+    );
+
+    background-size: 220% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    text-shadow: 0 0 22px rgba(201, 166, 70, 0.18);
+}
+
+.shimmer {
+    animation: gold-shimmer 9s ease-in-out infinite;
+}
+
+@keyframes gold-shimmer {
+    0%,
+    100% {
+        background-position: 0% center;
+    }
+
+    50% {
+        background-position: 100% center;
+    }
+}
+
+/* ========================================
+   COMMON PAGE LAYOUT
+   ======================================== */
+
+.page {
+    padding: 8rem 2rem 4rem;
+}
+
+.page-hero,
+.page-content {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.page-hero {
+    margin-bottom: 6rem;
+}
+
+.page-hero h1 {
+    margin: 0;
+
+    font-family: var(--font-title);
+    font-size: clamp(3rem, 8vw, 7rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+}
+
+.page-hero p:last-child {
+    max-width: 620px;
+
+    color: var(--muted);
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.eyebrow {
+    color: var(--muted);
+
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    letter-spacing: 0.35em;
+}
+
+.section-label {
+    color: var(--gold-light);
+
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.site-footer {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: 2rem;
+
+    border-top: 1px solid rgba(247, 243, 234, 0.14);
+
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+.site-footer nav {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+}
+
+/* ========================================
+   RESPONSIVE COMMON
+   ======================================== */
+
+@media (max-width: 620px) {
+    .site-header {
+        padding: 1rem;
+    }
+
+    .site-title {
+        display: none;
+    }
+
+    .site-nav {
+        gap: 1rem;
+        font-size: 1rem;
+    }
+
+    .page {
+        padding: 7rem 1rem 3rem;
+    }
+
+    .page-hero {
+        margin-bottom: 4rem;
+    }
+
+    .site-footer {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .shimmer {
+        animation: none;
+    }
+}

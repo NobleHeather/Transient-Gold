@@ -1,6 +1,6 @@
 <!--! NB -->
 
-Déjà codé tous les states de triangles, mais bug sur les animations (fonctionnent mais mal raccordées)
+certaines configurations de html nécessaires pour les animes : cf projects.html, bas de page
 Code commenté dans le html pour le lien vers le projet && pour les animations
 Page note : la nav archive est sous les articles, pas logique sémantiquement
 Donner un nom plus génériques aux css des cards de projet (utilisé dans la page notes aussi)
@@ -26,7 +26,7 @@ Donc on a :
 Transient Gold
 Kindling insight (since 2026)
 Et des status :
-Lost in transmutation : en pause
+Pending transmutation : en pause
 Chrysopoeia in progress : en cours de taf
 Turned to lead : abandonné
 Ignition : release

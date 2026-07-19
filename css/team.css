@@ -1,0 +1,73 @@
+/* ========================================
+   TEAM GRID
+   ======================================== */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 3rem;
+}
+
+/* ========================================
+   TEAM CARDS
+   ======================================== */
+
+.team-grid .project-card {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    padding-bottom: 2rem;
+
+    border-color: var(--gold-dark);
+}
+
+.team-grid .project-main {
+    flex: 1;
+}
+
+/* ========================================
+   TEAM IMAGE
+   ======================================== */
+
+.team-image {
+    display: block;
+
+    width: 60%;
+    aspect-ratio: 1;
+
+    margin: 2rem auto 1.5rem;
+
+    object-fit: cover;
+}
+
+/* ========================================
+   TEAM CONTENT
+   ======================================== */
+
+.team-grid .project-pitch {
+    padding-bottom: 2.5rem;
+}
+
+/* ========================================
+   TEAM CTA
+   ======================================== */
+
+.team-grid .project-link {
+    align-self: center;
+
+    margin-top: 2rem;
+    margin-bottom: 0;
+    padding-bottom: 2.5rem;
+}
+
+/* ========================================
+   RESPONSIVE TEAM
+   ======================================== */
+
+@media (max-width: 760px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}

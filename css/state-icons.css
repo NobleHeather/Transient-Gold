@@ -1,0 +1,252 @@
+/* ========================================
+   STATE ICONS — BASE
+   ======================================== */
+
+.state-icon {
+    width: 3rem;
+
+    color: var(--gold);
+
+    flex-shrink: 0;
+}
+
+.state-icon--small {
+    width: 2rem;
+    margin: 0;
+}
+
+.state-icon svg {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    overflow: visible;
+}
+
+.state-icon polygon {
+    fill: none;
+
+    stroke: currentColor;
+    stroke-width: 3;
+    stroke-linejoin: round;
+}
+
+/* ========================================
+   SPARK'S SEED
+   ======================================== */
+
+.state-seed polygon {
+    stroke-dasharray: 4 5;
+    opacity: 0.7;
+}
+
+/* ========================================
+   CHRYSOPOEIA IN PROGRESS
+   ======================================== */
+
+.state-chrysopoeia polygon {
+    stroke-dasharray: none;
+    opacity: 1;
+
+    filter: drop-shadow(0 0 6px rgba(201, 166, 70, 0.28));
+}
+
+/* ========================================
+   IGNITION
+   ======================================== */
+
+.state-ignition polygon {
+    fill: currentColor;
+    stroke: currentColor;
+
+    filter: drop-shadow(0 0 8px rgba(201, 166, 70, 0.35));
+}
+
+/* ========================================
+   TEMPERING
+   ======================================== */
+
+.state-tempering polygon {
+    fill: currentColor;
+    stroke: currentColor;
+
+    animation: tempering-glint 4s ease-in-out infinite;
+}
+
+@keyframes tempering-glint {
+    0%,
+    82%,
+    100% {
+        filter: drop-shadow(0 0 5px rgba(201, 166, 70, 0.18));
+        opacity: 0.85;
+    }
+
+    88% {
+        filter: drop-shadow(0 0 16px rgba(255, 246, 207, 0.65));
+        opacity: 1;
+    }
+}
+
+/* ========================================
+   PENDING TRANSMUTATION
+   ======================================== */
+
+.state-lost polygon {
+    fill: none;
+
+    stroke: currentColor;
+    stroke-width: 4;
+    stroke-dasharray: 8 10;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+
+    opacity: 0.75;
+
+    animation: lost-dash-flow 10s linear infinite;
+}
+
+@keyframes lost-dash-flow {
+    from {
+        stroke-dashoffset: 0;
+    }
+
+    to {
+        stroke-dashoffset: -60;
+    }
+}
+
+/* ========================================
+   STREWING GOLDEN EMBERS
+   ======================================== */
+
+.state-embers polygon {
+    fill: currentColor;
+    stroke: currentColor;
+
+    opacity: 0.9;
+
+    animation: ember-pulse 4.5s ease-in-out infinite;
+}
+
+.state-embers .ember {
+    fill: var(--gold-light);
+
+    opacity: 0;
+
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.state-embers .ember-1 {
+    animation: ember-drift-1 4.8s ease-out infinite;
+}
+
+.state-embers .ember-2 {
+    animation: ember-drift-2 5.6s 1.2s ease-out infinite;
+}
+
+.state-embers .ember-3 {
+    animation: ember-drift-3 4.2s 2.4s ease-out infinite;
+}
+
+@keyframes ember-pulse {
+    0%,
+    100% {
+        filter: drop-shadow(0 0 6px rgba(201, 166, 70, 0.2));
+        opacity: 0.85;
+    }
+
+    50% {
+        filter: drop-shadow(0 0 14px rgba(244, 223, 155, 0.45));
+        opacity: 1;
+    }
+}
+
+@keyframes ember-drift-1 {
+    0% {
+        transform: translate(0, 0) scale(0.6);
+        opacity: 0;
+    }
+
+    12% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.65;
+    }
+
+    100% {
+        transform: translate(8px, -17px) scale(0.45);
+        opacity: 0;
+    }
+}
+
+@keyframes ember-drift-2 {
+    0% {
+        transform: translate(0, 0) scale(0.5);
+        opacity: 0;
+    }
+
+    18% {
+        opacity: 0.9;
+    }
+
+    72% {
+        opacity: 0.55;
+    }
+
+    100% {
+        transform: translate(15px, -10px) scale(0.3);
+        opacity: 0;
+    }
+}
+
+@keyframes ember-drift-3 {
+    0% {
+        transform: translate(0, 0) scale(0.2);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translate(3px, -21px) scale(0.4);
+        opacity: 0;
+    }
+}
+
+/* ========================================
+   TURNED TO LEAD
+   ======================================== */
+
+.state-lead {
+    color: #6e6e6e;
+}
+
+.state-lead polygon {
+    fill: currentColor;
+    stroke: currentColor;
+
+    opacity: 0.8;
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .state-tempering polygon,
+    .state-lost polygon,
+    .state-embers polygon,
+    .state-embers .ember {
+        animation: none;
+    }
+}

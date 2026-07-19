@@ -1,0 +1,138 @@
+/* ========================================
+   NOTES LAYOUT
+   ======================================== */
+
+.notes-box {
+    display: grid;
+    grid-template-columns: 1fr 9rem;
+    gap: 3.5rem;
+}
+
+/* ========================================
+   NOTES ARCHIVE
+   ======================================== */
+
+.note-archive {
+    align-self: start;
+
+    padding: 1.25rem;
+
+    background: rgba(247, 243, 234, 0.035);
+    border: 1px solid rgba(247, 243, 234, 0.12);
+}
+
+.archive-title {
+    margin: 0 0 1.5rem;
+
+    color: var(--gold-light);
+
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+}
+
+.note-archive a {
+    display: block;
+    width: fit-content;
+
+    color: var(--white);
+
+    border-bottom: 1px solid rgba(201, 166, 70, 0.45);
+}
+
+/* ========================================
+   NOTES ARTICLES
+   ======================================== */
+
+.notes-articles {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.note-article {
+    padding: 3rem;
+
+    background: var(--bg);
+
+    border: 1px solid var(--gold-dark);
+    outline: 0.5px solid var(--gold);
+    outline-offset: 10px;
+
+    color: var(--muted);
+}
+
+.note-article h2 {
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.note-article p {
+    margin: 0 0 1.5rem;
+
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.note-article blockquote {
+    margin: 2rem 0;
+    padding-left: 1.5rem;
+
+    border-left: 2px solid rgba(201, 166, 70, 0.35);
+
+    color: var(--white);
+    font-style: italic;
+}
+
+/* ========================================
+   FOOTNOTES
+   ======================================== */
+
+.note-article sup {
+    font-size: 0.7em;
+}
+
+.note-article sup a {
+    color: var(--gold-light);
+}
+
+.note-footnotes {
+    margin-top: 4rem;
+    padding-top: 2rem;
+
+    border-top: 1px solid rgba(247, 243, 234, 0.12);
+
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.note-footnotes a {
+    border-bottom: 1px solid transparent;
+
+    transition:
+        color 180ms ease,
+        border-color 180ms ease;
+}
+
+.note-footnotes a:hover {
+    color: var(--gold-light);
+    border-color: var(--gold);
+}
+
+/* ========================================
+   RESPONSIVE NOTES
+   ======================================== */
+
+@media (max-width: 760px) {
+    .notes-box {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .note-archive {
+        grid-row: 1;
+    }
+
+    .note-article {
+        padding: 2rem;
+    }
+}
