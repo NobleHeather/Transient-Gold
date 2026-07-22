@@ -1,0 +1,70 @@
+.bug-layer {
+    position: fixed;
+    inset: 0;
+    z-index: 8;
+
+    pointer-events: none;
+}
+
+.wandering-bug {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    padding: 0;
+    border: 0;
+
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: 0 0;
+
+    image-rendering: pixelated;
+
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* btn anti bug  */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.bug-toggle {
+    display: grid;
+    place-items: center;
+
+    min-width: 7.5rem;
+    min-height: 2.25rem;
+    padding: 0.45rem 0.7rem;
+
+    border: 1px solid rgba(201, 166, 70, 0.4);
+    background: transparent;
+    color: var(--muted);
+
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+
+    cursor: pointer;
+}
+
+.bug-toggle:hover {
+    color: var(--gold-light);
+    border-color: var(--gold);
+}
+
+.bug-toggle__icon {
+    line-height: 0;
+}
+
+.bug-toggle__icon svg {
+    width: 1.15rem;
+    height: 1.15rem;
+}
+
+.bug-layer.is-hidden {
+    display: none;
+}

@@ -8,6 +8,8 @@ Donner un nom plus génériques aux css des cards de projet (utilisé dans la pa
 <!--+ next -->
 
 VERSION TEL
+annuler style de <a> sur titre dans la nav + mettre des couleurs plus sympas
+Relier le clic sur le bug qui se balade au tableau de chasse de Ai
 page note, largeur archive + mettre les dialogues en <q> ou autre et indentation
 page note article craft : link & style les signatures
 favicon
@@ -16,6 +18,7 @@ Régler tailles des textes
 Logo animé au changement de page ?
 Equipe avec motto
 logo animé en grand sur la page d'accueil
+Liste de weird bugs : soit une nav avec juste un insect en page note (et plus tard un livre pour la bibli de Léon), soit dans le footer -> nouvelle page en mode tableau de chasse
 
 ---
 
@@ -59,6 +62,12 @@ Library Puzzle Game → Explore the Archives
 Mutant cows -> warp to the next planet
 
 Logo animé au chargement de la page
+
+Aliénor : Weaver of Stories
+Heather : architect & Tinkerer
+Ai : Polymath & Entomologist
+Leon : cartographer of knowledge
+Bel : Troubadour
 
 Niveau 1 — L'icône
 Un triangle plein blanc.

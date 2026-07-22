@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="css/styles.css" />
         <link rel="stylesheet" href="css/projects.css" />
         <link rel="stylesheet" href="css/team.css" />
+        <link rel="stylesheet" href="css/bug.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -29,6 +30,13 @@
                 </span>
             </a>
 
+            <button class="bug-toggle" type="button" aria-pressed="false">
+                <span class="bug-toggle__text">I hate bugs!</span>
+
+                <span class="bug-toggle__icon" hidden aria-hidden="true">
+                    <i data-lucide="bug-off"></i>
+                </span>
+            </button>
             <nav class="site-nav" aria-label="Main navigation">
                 <a href="projects.html">Projects</a>
                 <a href="team.html">Team</a>
@@ -49,7 +57,7 @@
                 <article class="project-card">
                     <div class="project-main">
                         <h2>Heather</h2>
-                        <p class="project-status">Developer · Archivist</p>
+                        <p class="project-status">Architect & Tinkerer</p>
                         <img
                             src="assets/images/owl.jpeg"
                             alt="Heather's owl avatar"
@@ -89,9 +97,7 @@
                 <article class="project-card">
                     <div class="project-main">
                         <h2>Ai</h2>
-                        <p class="project-status">
-                            Research assistant & professional rubber duck.
-                        </p>
+                        <p class="project-status">Polymath & Entomologist</p>
                         <img
                             src="assets/images/nova.jpeg"
                             alt="Nova's avatar"
@@ -137,7 +143,7 @@
                 <article class="project-card">
                     <div class="project-main">
                         <h2>Aliénor</h2>
-                        <p class="project-status">Writer</p>
+                        <p class="project-status">Weaver of Stories</p>
                         <img
                             src="assets/images/alienor.jpeg"
                             alt="Alienor's avatar"
@@ -179,14 +185,18 @@
                 <article class="project-card">
                     <div class="project-main">
                         <h2>Bel</h2>
-                        <p class="project-status">Musicien</p>
+                        <p class="project-status">Troubadour</p>
                         <img
                             src="assets/images/bel.jpeg"
                             alt="Bel's avatar"
                             class="team-image"
                         />
 
-                        <p class="project-pitch">???</p>
+                        <p class="project-pitch">
+                            quelque chose à propos de Guillaume de Machaut comme
+                            dernier musicien total mais maintenant c'est à
+                            nouveau possible
+                        </p>
 
                         <p class="project-status">Motto</p>
 
@@ -222,7 +232,7 @@
                 <article class="project-card">
                     <div class="project-main">
                         <h2>Léon</h2>
-                        <p class="project-status">Developer · Archivist</p>
+                        <p class="project-status">Cartographer of knowledge</p>
                         <img
                             src="assets/images/leon.jpeg"
                             alt="Leon's avatar"
@@ -271,8 +281,19 @@
                 </article>
             </section>
         </main>
-        <footer class="site-footer" id="contact">
+        <footer class="site-footer site-footer--with-credit" id="contact">
             <p>© 2026 Transient Gold</p>
+
+            <p class="site-footer__credits">
+                Beetle sprites:
+                <a
+                    href="https://megamicrobats.itch.io/beetlepack"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Bat
+                </a>
+            </p>
 
             <nav aria-label="Social links">
                 <a href="#">Bluesky</a>
@@ -280,7 +301,15 @@
                 <a href="#">itch.io</a>
             </nav>
         </footer>
+        <div class="bug-layer">
+            <button
+                class="wandering-bug"
+                type="button"
+                aria-label="Open bug catalog"
+            ></button>
+        </div>
         <script src="https://unpkg.com/lucide@latest"></script>
+        <script type="module" src="js/bug.js"></script>
         <script>
             lucide.createIcons();
         </script>

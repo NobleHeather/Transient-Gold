@@ -71,3 +71,12 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* faire une place au bouton bug */
+.site-nav {
+    margin-left: auto;
+}
+
+.bug-toggle {
+    margin-left: 1.5rem;
+}
