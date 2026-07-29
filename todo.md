@@ -5,11 +5,21 @@ Code commenté dans le html pour le lien vers le projet && pour les animations
 Page note : la nav archive est sous les articles, pas logique sémantiquement
 Donner un nom plus génériques aux css des cards de projet (utilisé dans la page notes aussi)
 
+<!--+ bugs -->
+
+https://pixelodyssey.itch.io/100-bug-icons
+https://megamicrobats.itch.io/beetlepack
+
+<!--+ Liste de bug informatique  -->
+
+Et oui, rasteriser = transformer le SVG, qui est un dessin vectoriel, en une image faite de pixels pour que Phaser puisse l’afficher dans le canvas.
+-> chercher désespérément pourquoi ma speech bubble lucid est flou dans mon pixel art game
+
 <!--+ next -->
 
 VERSION TEL
 annuler style de <a> sur titre dans la nav + mettre des couleurs plus sympas
-Relier le clic sur le bug qui se balade au tableau de chasse de Ai
+quand on hover sur bug : tooltip custom avec infos perso de l'insect NB : tooltip persiste un peu même si l'insecte s'éloigne pour donner le temps de lire
 page note, largeur archive + mettre les dialogues en <q> ou autre et indentation
 page note article craft : link & style les signatures
 favicon
