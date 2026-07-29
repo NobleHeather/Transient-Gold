@@ -99,7 +99,7 @@
                         <h2>Ai</h2>
                         <p class="project-status">Polymath & Entomologist</p>
                         <img
-                            src="assets/images/nova.jpeg"
+                            src="assets/images/nova.png"
                             alt="Nova's avatar"
                             class="team-image"
                         />
@@ -145,7 +145,7 @@
                         <h2>Aliénor</h2>
                         <p class="project-status">Weaver of Stories</p>
                         <img
-                            src="assets/images/alienor.jpeg"
+                            src="assets/images/alienor.jpg"
                             alt="Alienor's avatar"
                             class="team-image"
                         />
@@ -161,7 +161,7 @@
                         </p>
 
                         <ul class="project-tags">
-                            <li>AI</li>
+                            <li>Human</li>
                         </ul>
                     </div>
                     <a class="project-link" href="#">
@@ -187,15 +187,17 @@
                         <h2>Bel</h2>
                         <p class="project-status">Troubadour</p>
                         <img
-                            src="assets/images/bel.jpeg"
+                            src="assets/images/bel.png"
                             alt="Bel's avatar"
                             class="team-image"
                         />
 
                         <p class="project-pitch">
-                            quelque chose à propos de Guillaume de Machaut comme
-                            dernier musicien total mais maintenant c'est à
-                            nouveau possible
+                            "People keep saying Guillaume de Machaut was the
+                            last musician who could do it all. I have chosen to
+                            interpret this statement as a personal attack. Music
+                            is a language, and I fully intend to become fluent
+                            in every dialect.""
                         </p>
 
                         <p class="project-status">Motto</p>
@@ -234,18 +236,22 @@
                         <h2>Léon</h2>
                         <p class="project-status">Cartographer of knowledge</p>
                         <img
-                            src="assets/images/leon.jpeg"
+                            src="assets/images/leon.png"
                             alt="Leon's avatar"
-                            class="team-image"
+                            class="team-image team-image--expandable"
+                            id="leon-avatar"
+                            tabindex="0"
+                            role="button"
+                            aria-label="Enlarge Léon's portrait"
                         />
 
                         <p class="project-pitch">
-                            Ex-librarian turned gameplay programmer. "What do
-                            you mean, 'I should have known'? Every game should
-                            have a wiki! And citations. And a thesaurus. The
-                            rest of the team won't let me implement them because
-                            it's "bad UX"... At least we have a catalogue.
-                            Hmph."
+                            Ex-librarian turned game researcher.<br />
+                            "What do you mean, 'I should have known'? Every game
+                            should have a wiki! And citations. And a thesaurus.
+                            The rest of the team won't let me implement them
+                            because it's "bad UX"... At least we have a
+                            catalogue. Hmph."
                         </p>
 
                         <p class="project-status">Motto</p>
@@ -305,11 +311,41 @@
             <button
                 class="wandering-bug"
                 type="button"
-                aria-label="Open bug catalog"
+                aria-describedby="bug-tooltip"
             ></button>
+
+            <div class="bug-tooltip" id="bug-tooltip" role="tooltip" hidden>
+                <strong class="bug-tooltip__name"></strong>
+                <p class="bug-tooltip__description"></p>
+                <span class="bug-tooltip__biome"></span>
+                <span class="bug-tooltip__status"></span>
+            </div>
+        </div>
+        <div
+            class="image-overlay"
+            id="leon-overlay"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Enlarged portrait of Léon"
+            hidden
+        >
+            <button
+                class="image-overlay__close"
+                type="button"
+                aria-label="Close enlarged portrait"
+            >
+                ×
+            </button>
+
+            <img
+                class="image-overlay__image"
+                src="assets/images/leon.png"
+                alt="Léon"
+            />
         </div>
         <script src="https://unpkg.com/lucide@latest"></script>
         <script type="module" src="js/bug.js"></script>
+        <script type="module" src="js/team.js"></script>
         <script>
             lucide.createIcons();
         </script>

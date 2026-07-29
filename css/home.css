@@ -61,6 +61,41 @@
     font-size: 1.2rem;
     line-height: 1.6;
 }
+**
+
+/* ========================================
+   SPARKS
+   ======================================== */
+
+.spark {
+    margin: 0;
+}
+
+.home-section .spark-text {
+    margin: 0;
+
+    color: var(--white);
+
+    font-family: var(--font-title);
+    font-size: 2rem;
+    line-height: 1.2;
+    /* font-size: 1.1rem; */
+}
+
+.spark-source {
+    margin-top: 1.5rem;
+
+    color: var(--muted);
+
+    /* font-size: 0.9rem; */
+    font-style: normal;
+    letter-spacing: 0.08em;
+    font-size: 1.2rem;
+}
+
+.spark-source:empty {
+    display: none;
+}
 
 /* ========================================
    RESPONSIVE HOME

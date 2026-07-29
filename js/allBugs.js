@@ -2,7 +2,11 @@ export const BUGS = [
     {
         id: "alder-leaf",
 
-        name: "Alder Leaf Beetle",
+        name: "Janus Percentalis",
+        description:
+            "The browser decided overnight that it now spoke % instead of rem. Still searching for my beautiful gradient background.",
+        biome: "Anatta webpage",
+        status: "In insectarium",
 
         sprite: "assets/bug/leafBeetle/leafBeetle.png",
 
@@ -23,7 +27,10 @@ export const BUGS = [
     {
         id: "another",
 
-        name: "Another Bug",
+        name: "Rasteris Nebulosa",
+        description: "WHY is my pixel art blurry??",
+        biome: "The Fire",
+        status: "Still laughing at me",
 
         sprite: "assets/bug/sunBeetle/sunBeetle.png",
 

@@ -68,3 +68,59 @@
 .bug-layer.is-hidden {
     display: none;
 }
+
+/* ========================================
+   BUG TOOLTIP
+   ======================================== */
+
+.bug-tooltip {
+    position: fixed;
+    z-index: 20;
+
+    width: max-content;
+    max-width: min(16rem, calc(100vw - 2rem));
+    padding: 0.8rem 1rem;
+
+    background: rgba(5, 5, 5, 0.94);
+    border: 1px solid var(--gold-dark);
+    outline: 1px solid rgba(201, 166, 70, 0.25);
+    outline-offset: 3px;
+
+    color: var(--muted);
+    font-size: 0.8rem;
+    line-height: 1.5;
+
+    pointer-events: none;
+
+    opacity: 0;
+    transform: translateY(0.4rem);
+
+    transition:
+        opacity 160ms ease,
+        transform 160ms ease;
+}
+
+.bug-tooltip.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bug-tooltip__name,
+.bug-tooltip__biome,
+.bug-tooltip__capture {
+    display: block;
+}
+
+.bug-tooltip__name {
+    margin-bottom: 0.35rem;
+
+    color: var(--gold-light);
+    font-family: var(--font-title);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.bug-tooltip__biome,
+.bug-tooltip__capture {
+    color: var(--muted);
+}

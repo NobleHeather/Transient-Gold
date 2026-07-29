@@ -8,6 +8,15 @@ const bugToggle = document.querySelector(".bug-toggle");
 
 const bugText = bugToggle.querySelector(".bug-toggle__text");
 const bugIcon = bugToggle.querySelector(".bug-toggle__icon");
+const bugTooltip = document.querySelector(".bug-tooltip");
+const bugTooltipName = document.querySelector(".bug-tooltip__name");
+const bugTooltipDescription = document.querySelector(
+    ".bug-tooltip__description",
+);
+const bugTooltipBiome = document.querySelector(".bug-tooltip__biome");
+const bugTooltipStatus = document.querySelector(".bug-tooltip__status");
+
+let tooltipTimeout;
 
 /* On applique l'insecte choisi */
 bug.style.backgroundImage = `url("${currentBug.sprite}")`;
@@ -16,7 +25,10 @@ bug.style.width = `${currentBug.frameWidth}px`;
 bug.style.height = `${currentBug.frameHeight}px`;
 
 bug.style.backgroundSize = `${currentBug.frameWidth * currentBug.frames}px ${currentBug.frameHeight}px`;
-
+bugTooltipName.textContent = currentBug.name;
+bugTooltipDescription.textContent = currentBug.description;
+bugTooltipBiome.innerHTML = `<em>Biome: ${currentBug.biome}</em>`;
+bugTooltipStatus.innerHTML = `<em>Status: ${currentBug.status}</em>`;
 /* Configuration */
 const SCALE = currentBug.scale;
 
@@ -25,7 +37,7 @@ const SPEED = currentBug.speed;
 const FRAME_WIDTH = currentBug.frameWidth;
 
 const FRAME_COUNT = currentBug.frames;
-const FRAME_DURATION = 90;
+const FRAME_DURATION = 200;
 
 const MIN_PAUSE = currentBug.pause.min;
 const MAX_PAUSE = currentBug.pause.max;
@@ -120,6 +132,66 @@ function startPause() {
     }, pauseDuration);
 }
 
+/* Affiche les informations de l'insecte à sa position actuelle */
+function showBugTooltip() {
+    clearTimeout(tooltipTimeout);
+
+    const bugRect = bug.getBoundingClientRect();
+    const tooltipMargin = 12;
+
+    bugTooltip.hidden = false;
+
+    /*
+     * On affiche d'abord le tooltip pour pouvoir mesurer
+     * ses dimensions réelles.
+     */
+    const tooltipRect = bugTooltip.getBoundingClientRect();
+
+    let tooltipX = bugRect.left + bugRect.width / 2;
+    let tooltipY = bugRect.bottom + tooltipMargin;
+
+    /*
+     * Le tooltip est centré sous l'insecte.
+     */
+    tooltipX -= tooltipRect.width / 2;
+
+    /*
+     * Empêche le tooltip de sortir horizontalement de l'écran.
+     */
+    tooltipX = Math.max(
+        tooltipMargin,
+        Math.min(
+            tooltipX,
+            window.innerWidth - tooltipRect.width - tooltipMargin,
+        ),
+    );
+
+    /*
+     * S'il n'y a pas assez de place dessous,
+     * il apparaît au-dessus de l'insecte.
+     */
+    if (tooltipY + tooltipRect.height > window.innerHeight - tooltipMargin) {
+        tooltipY = bugRect.top - tooltipRect.height - tooltipMargin;
+    }
+
+    bugTooltip.style.left = `${tooltipX}px`;
+    bugTooltip.style.top = `${tooltipY}px`;
+
+    requestAnimationFrame(() => {
+        bugTooltip.classList.add("is-visible");
+    });
+
+    tooltipTimeout = setTimeout(() => {
+        bugTooltip.classList.remove("is-visible");
+
+        setTimeout(() => {
+            if (!bugTooltip.classList.contains("is-visible")) {
+                bugTooltip.hidden = true;
+            }
+        }, 160);
+    }, 3000);
+}
+
 /* Bouton anti-insecte */
 bugToggle.addEventListener("click", () => {
     const isHidden = bugLayer.classList.toggle("is-hidden");
@@ -135,6 +207,8 @@ bugToggle.addEventListener("click", () => {
 
     localStorage.setItem("hide-wandering-bug", String(isHidden));
 });
+
+bug.addEventListener("mouseenter", showBugTooltip);
 
 /* Déplacement et orientation */
 function updateBug() {

@@ -18,17 +18,17 @@ Et oui, rasteriser = transformer le SVG, qui est un dessin vectoriel, en une ima
 <!--+ next -->
 
 VERSION TEL
-annuler style de <a> sur titre dans la nav + mettre des couleurs plus sympas
-quand on hover sur bug : tooltip custom avec infos perso de l'insect NB : tooltip persiste un peu même si l'insecte s'éloigne pour donner le temps de lire
-page note, largeur archive + mettre les dialogues en <q> ou autre et indentation
-page note article craft : link & style les signatures
+mettre des couleurs plus sympas
+page note, mettre les dialogues en <q> ou autre et indentation
+page note article craft : style les signatures
 favicon
 régler ce qui s'affiche quand on partage sur whatsapp etc
 Régler tailles des textes
 Logo animé au changement de page ?
-Equipe avec motto
-logo animé en grand sur la page d'accueil
+Equipe : motto/texte
+logo animé en grand sur la page d'accueil ?
 Liste de weird bugs : soit une nav avec juste un insect en page note (et plus tard un livre pour la bibli de Léon), soit dans le footer -> nouvelle page en mode tableau de chasse
+Quand on clique sur workshop Nova/Bel -> renvoie sur GPT et Suno + leurs avatars et texte changent avec set timeout dans localstorage
 
 ---
 

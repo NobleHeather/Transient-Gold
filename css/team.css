@@ -34,7 +34,7 @@
 .team-image {
     display: block;
 
-    width: 60%;
+    width: 100%;
     aspect-ratio: 1;
 
     margin: 2rem auto 1.5rem;
@@ -79,4 +79,93 @@
 
 .bug-toggle {
     margin-left: 1.5rem;
+}
+
+/* ========================================
+   EXPANDABLE AVATAR
+   ======================================== */
+
+.team-image--expandable {
+    cursor: zoom-in;
+}
+
+/* ========================================
+   IMAGE OVERLAY
+   ======================================== */
+
+.image-overlay {
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+
+    padding: 2rem;
+
+    display: grid;
+    place-items: center;
+
+    background: rgba(5, 5, 5, 0.94);
+    backdrop-filter: blur(8px);
+
+    cursor: zoom-out;
+}
+
+.image-overlay[hidden] {
+    display: none;
+}
+
+.image-overlay__image {
+    display: block;
+
+    width: auto;
+    height: auto;
+    max-width: calc(100vw - 4rem);
+    max-height: calc(100vh - 4rem);
+
+    object-fit: contain;
+
+    cursor: default;
+}
+
+.image-overlay__close {
+    position: fixed;
+    z-index: 1;
+    top: 1.5rem;
+    right: 1.5rem;
+
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+
+    background: rgba(5, 5, 5, 0.8);
+    color: var(--white);
+
+    border: 1px solid rgba(247, 243, 234, 0.25);
+    border-radius: 50%;
+
+    font: inherit;
+    font-size: 1.8rem;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.image-overlay__close:hover,
+.image-overlay__close:focus-visible {
+    color: var(--gold-light);
+    border-color: var(--gold);
+}
+
+body.has-open-overlay {
+    overflow: hidden;
+}
+
+@media (max-width: 620px) {
+    .image-overlay {
+        padding: 1rem;
+    }
+
+    .image-overlay__image {
+        max-width: calc(100vw - 2rem);
+        max-height: calc(100vh - 2rem);
+    }
 }
