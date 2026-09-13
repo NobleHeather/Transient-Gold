@@ -145,6 +145,13 @@
     font-weight: 700;
 }
 
+/* Position des liens d'ancrage */
+.note-article,
+.note-article sup[id],
+.note-footnotes li[id] {
+    scroll-margin-top: 6rem;
+}
+
 /* ========================================
    RESPONSIVE NOTES
    ======================================== */
