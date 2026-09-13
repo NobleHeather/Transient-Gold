@@ -5,6 +5,10 @@ Code commenté dans le html pour le lien vers le projet && pour les animations
 Page note : la nav archive est sous les articles, pas logique sémantiquement
 Donner un nom plus génériques aux css des cards de projet (utilisé dans la page notes aussi)
 
+<!--% Pitch -->
+
+The Beast : Qu'est-ce qui se passe si on mix : the floor is lava, le palais des glaces, des cartes random, une histoire ?
+
 <!--+ bugs -->
 
 https://pixelodyssey.itch.io/100-bug-icons
@@ -29,6 +33,32 @@ Equipe : motto/texte
 logo animé en grand sur la page d'accueil ?
 Liste de weird bugs : soit une nav avec juste un insect en page note (et plus tard un livre pour la bibli de Léon), soit dans le footer -> nouvelle page en mode tableau de chasse
 Quand on clique sur workshop Nova/Bel -> renvoie sur GPT et Suno + leurs avatars et texte changent avec set timeout dans localstorage
+Liens du footer
+Ajouter adresse mail : on clique sur mail, blabla à propos de nous contacter que pour les sujets ci dessous avec catégories dépliables et adresse mail dans catégorie :
+Partnerships & collaborations More info ▾
+→ Porting a game to another platform, distribution, events, crossovers, institutional or creative partnerships.
+
+Press & media More info ▾
+→ Interviews, articles, podcasts, review copies, requests for press material.
+
+Business & licensing More info ▾
+→ Licensing, commercial use of our work, publishing or distribution proposals.
+
+Research & education More info ▾
+→ Academic research, teaching, conferences, student projects, requests related to our development process.
+
+Accessibility More info ▾
+→ Professional accessibility inquiries, accessibility initiatives or collaborations.
+→ Not individual bug/accessibility reports about a game → ça, ça va dans le système de feedback du jeu.
+
+Legal & administrative More info ▾
+→ Copyright, contracts, invoices, formal administrative requests.
+
+Et surtout je mettrais sous la liste un gros :
+
+Can't find your topic above?
+That probably means this isn't the right inbox. Please don't pick the closest category — unrelated emails will be ignored.
+l'adresse mail / bouton Contact reste inaccessible jusqu'à ce que la personne ait ouvert une catégorie, puis elle clique “Yes, this is what I'm contacting you about”
 
 ---
 
