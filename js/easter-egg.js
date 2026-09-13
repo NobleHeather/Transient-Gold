@@ -141,8 +141,18 @@ document.querySelectorAll("[data-easter-egg]").forEach((link) => {
    PAGE LOAD
    ======================================== */
 
-Object.keys(easterEggProfiles).forEach((person) => {
-    if (easterEggIsActive(person)) {
-        revealWikiCard(person);
-    }
+function revealActiveEasterEggs() {
+    Object.keys(easterEggProfiles).forEach((person) => {
+        if (easterEggIsActive(person)) {
+            revealWikiCard(person);
+        }
+    });
+}
+
+/* Chargement normal */
+revealActiveEasterEggs();
+
+/* Retour sur la page via l'historique du navigateur */
+window.addEventListener("pageshow", () => {
+    revealActiveEasterEggs();
 });
