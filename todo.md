@@ -165,3 +165,20 @@ Motto: Question certainty. Especially mine.
 Stay on your toes. Ai hallucinante with conviction
 
 Stay sharp. We live in an era of misinformation & propaganda
+
+Je ferais maintenant, dans cet ordre :
+
+Mettre le dossier du site dans un repo GitHub et vérifier que index.html est bien à la racine. Puis Settings → Pages → Build and deployment → Deploy from a branch → main → / (root). Ça nous donne d’abord une vraie URL ...github.io/... pour vérifier que tout fonctionne en production.
+Tester cette version en ligne : navigation, mobile, images, easter eggs, liens externes, favicon, popup mail, etc. Ça permet de distinguer les problèmes du site des problèmes DNS.
+Ensuite on branche ton domaine Transient Gold dans Settings → Pages → Custom domain. GitHub Pages accepte bien les domaines racine du genre transient-gold.com ainsi que www.transient-gold.com.
+Enfin on retourne chez ton registrar pour régler le DNS. Pour le domaine racine, GitHub donne actuellement ces quatre enregistrements A :
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+
+Et pour www, on met un CNAME vers ton adresse GitHub Pages (TON-USERNAME.github.io, sans le nom du repo). GitHub recommande de configurer à la fois l'apex et www; il pourra alors gérer la redirection entre les deux.
+
+Je ferais de https://transient-gold.com l’adresse canonique, puisque c’est déjà celle qu’on a mise dans tes métadonnées Open Graph.
+
+Il y a également une vérification de propriété du domaine via un enregistrement DNS TXT; GitHub la recommande pour éviter qu’un autre compte GitHub puisse revendiquer ton domaine pour Pages. On la fera aussi, mais ce n'est pas la peine de tout mélanger à la première étape.
