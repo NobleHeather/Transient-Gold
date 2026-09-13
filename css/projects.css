@@ -258,10 +258,6 @@
    RESPONSIVE PROJECTS
    ======================================== */
 
-/* ========================================
-   RESPONSIVE PROJECTS
-   ======================================== */
-
 @media (max-width: 760px) {
     /* ---------- Summary ---------- */
 
@@ -291,6 +287,10 @@
         grid-template-columns: 1fr;
     }
 
+    .project-card h2 {
+        font-size: clamp(1.8rem, 8vw, 2.8rem);
+    }
+
     /* Triangle + surtitre réellement centrés verticalement */
     .project-meta {
         align-items: center;
@@ -302,6 +302,7 @@
 
     .project-meta .project-status {
         margin: 0;
+        font-size: 1rem;
     }
 
     /* CTA centré horizontalement */

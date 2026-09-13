@@ -467,6 +467,215 @@
                 <!-- <a href="#">itch.io</a> -->
             </nav>
         </footer>
+        <dialog class="contact-dialog" id="contact-dialog">
+            <div class="contact-dialog__inner">
+                <button
+                    class="contact-dialog__close"
+                    type="button"
+                    aria-label="Close contact information"
+                >
+                    ×
+                </button>
+
+                <header class="contact-dialog__header">
+                    <h2>Before you email us</h2>
+
+                    <p>
+                        This inbox is for professional, institutional and
+                        creative inquiries. Choose the category that best
+                        matches why you're contacting us.
+                    </p>
+                </header>
+
+                <div class="contact-categories">
+                    <details
+                        class="contact-category"
+                        data-category="Partnerships & collaborations"
+                    >
+                        <summary>
+                            <span>Partnerships & collaborations</span>
+                            <span class="contact-category__more"
+                                >More info</span
+                            >
+                        </summary>
+
+                        <div class="contact-category__content">
+                            <p>
+                                Porting a game to another platform,
+                                distribution, events, crossovers, institutional
+                                or creative partnerships.
+                            </p>
+
+                            <button
+                                class="contact-category__confirm"
+                                type="button"
+                            >
+                                Yes, this is what I'm contacting you about
+                            </button>
+                        </div>
+                    </details>
+
+                    <details
+                        class="contact-category"
+                        data-category="Press & media"
+                    >
+                        <summary>
+                            <span>Press & media</span>
+                            <span class="contact-category__more"
+                                >More info</span
+                            >
+                        </summary>
+
+                        <div class="contact-category__content">
+                            <p>
+                                Interviews, articles, podcasts, review copies,
+                                or requests for press material.
+                            </p>
+
+                            <button
+                                class="contact-category__confirm"
+                                type="button"
+                            >
+                                Yes, this is what I'm contacting you about
+                            </button>
+                        </div>
+                    </details>
+
+                    <details
+                        class="contact-category"
+                        data-category="Business & licensing"
+                    >
+                        <summary>
+                            <span>Business & licensing</span>
+                            <span class="contact-category__more"
+                                >More info</span
+                            >
+                        </summary>
+
+                        <div class="contact-category__content">
+                            <p>
+                                Licensing, commercial use of our work,
+                                publishing or distribution proposals.
+                            </p>
+
+                            <button
+                                class="contact-category__confirm"
+                                type="button"
+                            >
+                                Yes, this is what I'm contacting you about
+                            </button>
+                        </div>
+                    </details>
+
+                    <details
+                        class="contact-category"
+                        data-category="Research & education"
+                    >
+                        <summary>
+                            <span>Research & education</span>
+                            <span class="contact-category__more"
+                                >More info</span
+                            >
+                        </summary>
+
+                        <div class="contact-category__content">
+                            <p>
+                                Academic research, teaching, conferences,
+                                student projects, or requests related to our
+                                development process.
+                            </p>
+
+                            <button
+                                class="contact-category__confirm"
+                                type="button"
+                            >
+                                Yes, this is what I'm contacting you about
+                            </button>
+                        </div>
+                    </details>
+
+                    <details
+                        class="contact-category"
+                        data-category="Accessibility"
+                    >
+                        <summary>
+                            <span>Accessibility</span>
+                            <span class="contact-category__more"
+                                >More info</span
+                            >
+                        </summary>
+
+                        <div class="contact-category__content">
+                            <p>
+                                Professional accessibility inquiries,
+                                accessibility initiatives or collaborations.
+                            </p>
+
+                            <p class="contact-category__note">
+                                Individual accessibility or bug reports about a
+                                game belong in that game's feedback system
+                                instead.
+                            </p>
+
+                            <button
+                                class="contact-category__confirm"
+                                type="button"
+                            >
+                                Yes, this is what I'm contacting you about
+                            </button>
+                        </div>
+                    </details>
+
+                    <details
+                        class="contact-category"
+                        data-category="Legal & administrative"
+                    >
+                        <summary>
+                            <span>Legal & administrative</span>
+                            <span class="contact-category__more"
+                                >More info</span
+                            >
+                        </summary>
+
+                        <div class="contact-category__content">
+                            <p>
+                                Copyright, contracts, invoices, or formal
+                                administrative requests.
+                            </p>
+
+                            <button
+                                class="contact-category__confirm"
+                                type="button"
+                            >
+                                Yes, this is what I'm contacting you about
+                            </button>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="contact-dialog__wrong-inbox">
+                    <h3>Can't find your topic above?</h3>
+
+                    <p>
+                        That probably means this isn't the right inbox. Please
+                        don't pick the closest category — unrelated emails will
+                        be ignored.
+                    </p>
+                </div>
+
+                <footer class="contact-dialog__footer">
+                    <p class="contact-dialog__selection" aria-live="polite"></p>
+
+                    <button
+                        class="contact-dialog__contact"
+                        type="button"
+                        disabled
+                    >
+                        Contact
+                    </button>
+                </footer>
+            </div>
+        </dialog>
         <script type="module" src="js/contact.js"></script>
     </body>
 </html>
