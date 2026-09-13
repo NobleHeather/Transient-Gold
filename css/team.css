@@ -159,6 +159,98 @@ body.has-open-overlay {
     overflow: hidden;
 }
 
+/*? EASTER EGG  */
+/* ========================================
+   WIKI MODE — AI / BEL EASTER EGG
+   ======================================== */
+
+.project-card.is-wiki-mode {
+    background: white;
+    color: black;
+
+    /* On garde volontairement la border dorée existante */
+    box-shadow: none;
+}
+
+.project-card.is-wiki-mode .project-main {
+    background: white;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.project-card.is-wiki-mode .wiki-profile {
+    padding: 1.5rem;
+}
+
+.project-card.is-wiki-mode .wiki-profile__title {
+    margin: 0 0 1rem;
+
+    color: black;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.project-card.is-wiki-mode .wiki-profile__image {
+    display: block;
+
+    width: 12rem;
+    max-width: 100%;
+    height: auto;
+
+    margin: 1.5rem auto 1.5rem;
+
+    border: 1px solid #a2a9b1;
+}
+
+.project-card.is-wiki-mode .wiki-profile__description {
+    margin: 0 0 1rem;
+
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.project-card.is-wiki-mode .project-tags {
+    margin: 0 0 1rem;
+    padding: 0;
+
+    list-style: none;
+}
+
+/* .project-card.is-wiki-mode .project-tags li {
+    display: inline-block;
+
+    padding: 0.15rem 0.4rem;
+
+    background: #7a7c80;
+    border: 1px solid #dfe7f1;
+    border-radius: 0;
+
+    color: #e9ecee;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+} */
+
+.project-card.is-wiki-mode .wiki-profile__link,
+.project-card.is-wiki-mode .project-link {
+    background: white;
+    border: none;
+
+    color: #0645ad;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    text-decoration: underline;
+}
+
+.project-card.is-wiki-mode .wiki-profile__link:hover,
+.project-card.is-wiki-mode .project-link:hover {
+    color: #0b0080;
+    text-decoration: underline;
+}
+
 @media (max-width: 620px) {
     .image-overlay {
         padding: 1rem;

@@ -4,7 +4,15 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/mail.css" />
+
         <link rel="stylesheet" href="css/notes.css" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="512x512"
+            href="assets/images/favicon3.png"
+        />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,6 +21,23 @@
             href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
             rel="stylesheet"
         />
+        <!-- Social preview -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://transient-gold.com/" />
+
+        <meta property="og:title" content="Transient Gold" />
+        <meta
+            property="og:description"
+            content="Independent video games. Questionable experiments. Too many ideas."
+        />
+
+        <meta
+            property="og:image"
+            content="https://transient-gold.com/assets/social-preview.png"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Transient Gold" />
         <title>Transient Gold</title>
     </head>
     <body>
@@ -45,16 +70,16 @@
             </section>
 
             <section class="page-content notes-box">
-                 <details class="note-archive">
-        <summary class="archive-title">Archive</summary>
+                <details class="note-archive">
+                    <summary class="archive-title">Archive</summary>
 
-        <nav class="archive-links" aria-label="Notes archive">
-            <a href="#origin">2026 · Origin</a>
-            <a href="#craft">2026 · Ideas are a Craft</a>
-            <a href="#evidence">2026 · Evidence before Ego</a>
-        </nav>
-    </details>
-                
+                    <nav class="archive-links" aria-label="Notes archive">
+                        <a href="#origin">2026 · Origin</a>
+                        <a href="#craft">2026 · Ideas are a Craft</a>
+                        <a href="#evidence">2026 · Evidence before Ego</a>
+                    </nav>
+                </details>
+
                 <section class="notes-articles" aria-label="Notes articles">
                     <article class="note-article" id="origin">
                         <!-- <p class="eyebrow">Studio note</p> -->
@@ -136,7 +161,7 @@
                             What if I could leave tiny golden embers in my wake,
                             one game at a time?
                         </p>
-                        <p>A.G.</p>
+                        <p class="note-signature">A.G.</p>
 
                         <footer class="note-footnotes">
                             <ol>
@@ -302,10 +327,9 @@
 
                         <p>
                             Who digested it? You or the trillions of organisms
-                            living inside your body? <sup
-                                id="ref-2"
-                                ><a href="#note-2">[2]</a></sup
-                        </p
+                            living inside your body?
+                            <sup id="ref-2"><a href="#note-2">[2]</a></sup>
+                        </p>
 
                         <p>
                             And I have a question of my own, which I'll leave
@@ -324,7 +348,7 @@
                         <p>We don't create.</p>
 
                         <p>We transmute.</p>
-                        <p>H.N.</p>
+                        <p class="note-signature">H.N.</p>
 
                         <footer class="note-footnotes">
                             <ol>
@@ -340,15 +364,14 @@
                                         href="https://www.nature.com/articles/s41579-024-01136-9?"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        > & here</a
+                                    >
+                                        & here</a
                                     >
                                     ·
                                     <a href="#ref-2">↩</a>
                                 </li>
                             </ol>
                         </footer>
-
-                
                     </article>
                     <article class="note-article" id="evidence">
                         <h2>
@@ -421,24 +444,29 @@
                             (And <em>yes</em>, I wrote all the wikis. It's my
                             Legacy. Capital L.)
                         </p>
-                        <p>L.Z.</p>
+                        <p class="note-signature">L.Z.</p>
                     </article>
 
                     <!-- <article class="note-article" id="test">
                         <p>bla bla bla</p>
                     </article> -->
                 </section>
-           
             </section>
         </main>
         <footer class="site-footer" id="contact">
             <p>© 2026 Transient Gold</p>
 
             <nav aria-label="Social links">
-                <a href="#">Bluesky</a>
-                <a href="#">Substack</a>
-                <a href="#">itch.io</a>
+                <a href="https://bsky.app/profile/transientgold.bsky.social"
+                    >Bluesky</a
+                >
+                <!-- <a href="#">Substack</a> -->
+                <a class="contact-link" href="mailto:transientgold@proton.me">
+                    Email
+                </a>
+                <!-- <a href="#">itch.io</a> -->
             </nav>
         </footer>
+        <script type="module" src="js/contact.js"></script>
     </body>
 </html>

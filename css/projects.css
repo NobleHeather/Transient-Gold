@@ -109,11 +109,9 @@
     line-height: 1.65;
 }
 
-.project-card p:not(.project-kicker):not(.project-status) {
+.project-card:not(.is-wiki-mode) p:not(.project-kicker):not(.project-status) {
     max-width: 640px;
-
     color: var(--muted);
-
     font-size: 1.2rem;
     line-height: 1.6;
 }
@@ -260,19 +258,57 @@
    RESPONSIVE PROJECTS
    ======================================== */
 
+/* ========================================
+   RESPONSIVE PROJECTS
+   ======================================== */
+
 @media (max-width: 760px) {
+    /* ---------- Summary ---------- */
+
     .project-summary {
         font-size: 1.1rem;
+        gap: 0.6rem;
     }
+
+    /* Force un retour après "Currently:" */
+    .project-summary .summary-label {
+        flex-basis: 100%;
+    }
+
+    /* Chaque état prend ensuite sa ligne */
+    .project-summary .summary-item {
+        flex-basis: 100%;
+        align-items: center;
+    }
+
+    .summary-item .state-icon {
+        top: 0;
+    }
+
+    /* ---------- Cards ---------- */
 
     .project-card {
         grid-template-columns: 1fr;
     }
 
-    .project-card .project-link {
-        justify-self: start;
-        align-items: flex-start;
+    /* Triangle + surtitre réellement centrés verticalement */
+    .project-meta {
+        align-items: center;
+    }
 
-        text-align: left;
+    .project-meta .state-icon {
+        transform: none;
+    }
+
+    .project-meta .project-status {
+        margin: 0;
+    }
+
+    /* CTA centré horizontalement */
+    .project-card .project-link {
+        justify-self: center;
+        align-items: center;
+
+        text-align: center;
     }
 }

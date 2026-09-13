@@ -140,6 +140,11 @@
     border-color: var(--gold);
 }
 
+.note-signature {
+    color: var(--gold-light);
+    font-weight: 700;
+}
+
 /* ========================================
    RESPONSIVE NOTES
    ======================================== */
