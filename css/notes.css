@@ -109,46 +109,13 @@
    FOOTNOTES
    ======================================== */
 
-.note-article sup {
-    font-size: 0.7em;
-}
-
-.note-article sup a {
-    color: var(--gold-light);
-}
-
-.note-footnotes {
-    margin-top: 4rem;
-    padding-top: 2rem;
-
-    border-top: 1px solid rgba(247, 243, 234, 0.12);
-
-    color: var(--muted);
-    font-size: 0.95rem;
-}
-
-.note-footnotes a {
-    border-bottom: 1px solid transparent;
-
-    transition:
-        color 180ms ease,
-        border-color 180ms ease;
-}
-
-.note-footnotes a:hover {
-    color: var(--gold-light);
-    border-color: var(--gold);
-}
-
 .note-signature {
     color: var(--gold-light);
     font-weight: 700;
 }
 
 /* Position des liens d'ancrage */
-.note-article,
-.note-article sup[id],
-.note-footnotes li[id] {
+.note-article {
     scroll-margin-top: 6rem;
 }
 

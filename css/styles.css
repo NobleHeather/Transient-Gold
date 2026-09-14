@@ -192,9 +192,9 @@ img {
     letter-spacing: -0.04em;
 }
 
-.page-hero p:last-child {
+.page-hero > p {
+    margin-top: 1.5rem;
     max-width: 620px;
-
     color: var(--muted);
     font-size: 1.2rem;
     line-height: 1.6;
