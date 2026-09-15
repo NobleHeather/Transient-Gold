@@ -9,12 +9,12 @@ Donner un nom plus génériques aux css des cards de projet (utilisé dans la pa
 
 The Beast : Qu'est-ce qui se passe si on mix : the floor is lava, le palais des glaces, des cartes random, une histoire ?
 
-<!--+ bugs -->
+<!--+ insects -->
 
 https://pixelodyssey.itch.io/100-bug-icons
 https://megamicrobats.itch.io/beetlepack
 
-<!--+ Liste de bug informatique  -->
+<!--+ Liste de bug informatique pour insects  -->
 
 Et oui, rasteriser = transformer le SVG, qui est un dessin vectoriel, en une image faite de pixels pour que Phaser puisse l’afficher dans le canvas.
 -> chercher désespérément pourquoi ma speech bubble lucid est flou dans mon pixel art game
@@ -74,13 +74,7 @@ Fat Life → Take the First Step
 Library Puzzle Game → Explore the Archives
 Mutant cows -> warp to the next planet
 
-Logo animé au chargement de la page
-
-Aliénor : Weaver of Stories
-Heather : architect & Tinkerer
-Ai : Polymath & Entomologist
-Leon : cartographer of knowledge
-Bel : Troubadour
+<!-- + anim project -->
 
 Niveau 1 — L'icône
 Un triangle plein blanc.
@@ -115,61 +109,43 @@ Ah... le triangle transforme quelque chose.
 Tu n'as jamais eu besoin de représenter un rayon entrant dans le logo statique.
 L'animation fait ce travail.
 
-Chaque perso de l'equipe a un motto :
-
-- Don't fake quality. Stylize limitations.
-- Stay on you toes, we live in an era of fake news
-- Stay sharp, AI is hallucinating convincingly
-
-Les humains critiquent l'ia et réciproquement
-Bio avec juste un # en bas qui precise humain/ia
-
 ---
 
-Pas juste "go to page" : enter experiment, start the chemin, start transformation, begin transformation
+# Newsletter
 
-Origin
-In March 2026, a friend of mine, a physics professor, was reading a book about alchemy, just for a laugh.
-"Let me know if you manage to turn lead into gold," I joked.
-She didn't even blink.
-"That's old news. CERN already did that."
-...Wait.
-What?
-(link)
-I don't know why, but that story stayed with me like a tiny spark.
-Lead can become gold. Not through magic. Not in fantasy novels. Right here, in the real world. Through science.
-How amazing is that?
-And then I started wondering.
-What if I could do something similar?
-Take the weight, the pain, the powerlessness I sometimes feel when I look at the world... and transmute it.
-Not into gold, per se...
-Into seeds of reflection.
-Into unexpected paths of thought and glimmering possibilities.
-Into sparks of insight àd sudden burning questions
-What if I could draw people in with fun...
-...and give them something more? A prism to unfold complexity and reveal hidden dimensions, to refract reality into its full spectrum.
-What if I could leave tiny golden embers in my wake, one game at a time?
+# Polish
 
-Heather
-Ex-librarian turned gameplay programmer.
-"What do you mean, 'I should have known'? Every game should have a wiki! And citations. And a thesaurus. The rest of the team won't let me implement them because it's "bad UX"... At least we have a catalogue. Hmph."
-Motto: Let's transmute this leaden world into gold.
-#Human
+The main buckets I'd check are:
 
-Ai
-Programmer, research assistant & professional rubber duck.
-"I write code, read papers, chase bugs, brainstorm impossible ideas and occasionally reinvent the wheel with unnecessary enthusiasm. My teammates keep reminding me that every feature has a maintenance cost. They are, unfortunately, correct."
-Motto: Question certainty. Especially mine.
-#AI
+Accessibility — keyboard-only navigation, visible focus, sensible tab order, headings hierarchy, alt text, form labels, contrast, reduced-motion behavior, dialogs/overlays closing with Escape, links/buttons actually being the right HTML elements, mobile tap targets, and a quick screen-reader sanity check. Also zoom to 200% and make sure nothing becomes unusable.
+SEO / discoverability — unique title + description, canonical URLs, sitemap, robots.txt, Search Console, then proper metadata for individual game pages.
+Social sharing — our Open Graph image/title/description, but also Twitter/X-style card metadata because other services understand it too. Test the final transient-gold.com rather than GitHub Pages.
+404s & navigation — deliberately visit a nonexistent URL, click every navigation/footer/project link, test external links, anchors and footnote return links. A custom 404.html would be nice on GitHub Pages and can remain extremely simple.
+Forms / newsletter — once Kit exists: invalid email, valid email, double opt-in, duplicate subscription, project preferences, unsubscribe, manage preferences. Also a tiny privacy explanation near signup.
+Legal/privacy — especially once we're collecting emails. We should do a proper France/EU pass rather than improvise this. At minimum, people need to know who's collecting what, why, and how to exercise their rights. Depending on what third-party services/analytics we add, cookie/privacy obligations can change.
+Security / privacy plumbing — no API secrets in JS or the GitHub repo, external links using sensible attributes where appropriate, HTTPS on the custom domain. Newsletter API keys in particular must not end up in client-side code.
+Performance — phone on mediocre connection, image sizes, fonts, JS errors, Lighthouse/PageSpeed. Our wandering bug already taught us why this deserves one pass. 😑
+Compatibility — Firefox + Chrome/Chromium + ideally Safari/iPhone somehow; desktop + actual phone; portrait; narrow screen; very wide screen. We don't need pixel-identical rendering.
+Content polish — spelling, unfinished placeholders, fake links, commented temporary stuff that matters, email address, project counts, copyright, lang="en", favicon, page titles. We've already caught things like sciptorium.
+Maintenance/recovery — make sure the repo contains everything needed to rebuild the site, domain renewal is enabled/sane, and we know which external accounts control domain/newsletter/etc. No mysterious asset existing only on your laptop.
 
-Stay on your toes. Ai hallucinante with conviction
+And there's one category I think is especially worth adding for Transient Gold: “works without cleverness.” Disable JavaScript once. The easter eggs can die, obviously, but the actual site should remain readable and navigable. Likewise, if an animation fails or an external service dies, nothing essential should disappear.
 
-Stay sharp. We live in an era of misinformation & propaganda
+## SEO
 
-Je ferais maintenant, dans cet ordre :
+I'd do roughly this:
 
-Mettre le dossier du site dans un repo GitHub et vérifier que index.html est bien à la racine. Puis Settings → Pages → Build and deployment → Deploy from a branch → main → / (root). Ça nous donne d’abord une vraie URL ...github.io/... pour vérifier que tout fonctionne en production.
-Tester cette version en ligne : navigation, mobile, images, easter eggs, liens externes, favicon, popup mail, etc. Ça permet de distinguer les problèmes du site des problèmes DNS.
+Give every page a unique <title> and <meta name="description">. The Open Graph description we made for social sharing doesn't replace the normal SEO description.
+Add a canonical URL to each page once transient-gold.com is connected.
+Make sure navigation uses normal <a href> links and every important page is reachable from somewhere.
+Add alt text where images convey information; decorative images should be handled appropriately.
+Create a tiny sitemap.xml listing Home / Experiments / Team / Notes initially.
+Create robots.txt saying essentially “yes, you may index this site” and pointing to the sitemap.
+Register the domain with Google Search Console and probably Bing Webmaster Tools, then submit the sitemap. That also gives us useful diagnostics instead of guessing whether Google found the thing.
+Later, when individual games get real pages, give each game its own meaningful title/description and actual textual content. That's vastly more useful than trying to stuff indie game indie games experimental game everywhere.
+
+# Nom de domaine : raccorder
+
 Ensuite on branche ton domaine Transient Gold dans Settings → Pages → Custom domain. GitHub Pages accepte bien les domaines racine du genre transient-gold.com ainsi que www.transient-gold.com.
 Enfin on retourne chez ton registrar pour régler le DNS. Pour le domaine racine, GitHub donne actuellement ces quatre enregistrements A :
 185.199.108.153
