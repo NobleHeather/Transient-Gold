@@ -1,0 +1,221 @@
+/* ========================================
+   NEWSLETTER
+   ======================================== */
+
+.newsletter-section {
+    max-width: 1100px;
+    margin: 6rem auto;
+    padding: 0 2rem;
+}
+
+.newsletter-section > p:not(.section-kicker) {
+    max-width: 800px;
+}
+
+/* ========================================
+   KIT FORM
+   ======================================== */
+
+.newsletter-section .formkit-form {
+    max-width: none !important;
+    background: transparent !important;
+    color: var(--text);
+}
+
+/* Kit's main container */
+.newsletter-section .formkit-fields {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 2rem;
+    align-items: start;
+    width: 100%;
+}
+
+/* Email */
+.newsletter-section .formkit-field:first-child {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.newsletter-section .formkit-input {
+    width: 100%;
+    background: transparent !important;
+    color: var(--text) !important;
+    border: 1px solid var(--gold) !important;
+}
+
+.newsletter-section .formkit-input::placeholder {
+    color: var(--muted) !important;
+}
+
+/* Subscribe */
+.newsletter-section .formkit-submit {
+    grid-column: 2;
+    grid-row: 1;
+
+    align-self: stretch;
+    min-height: 0;
+    height: auto;
+    padding: 0.9rem 1.8rem;
+
+    background: transparent !important;
+    color: var(--gold-light) !important;
+    border: 1px solid var(--gold) !important;
+    border-radius: 0 !important;
+}
+
+.newsletter-section .formkit-submit:hover {
+    background: var(--gold) !important;
+    color: #000 !important;
+}
+
+/* ========================================
+   PREFERENCES
+   ======================================== */
+
+/* Second formkit-field = our checkbox field */
+.newsletter-section .formkit-field:nth-child(2) {
+    grid-column: 1 / -1;
+    grid-row: 2;
+}
+
+.newsletter-section .formkit-form fieldset {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 3rem;
+    row-gap: 0.65rem;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    color: var(--text) !important;
+}
+
+.newsletter-section .formkit-form legend {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-bottom: 0.75rem;
+
+    color: var(--gold-light) !important;
+    font-weight: 700 !important;
+}
+
+/* Every checkbox */
+.newsletter-section .formkit-checkboxes {
+    margin: 0 !important;
+    color: var(--text) !important;
+}
+
+.newsletter-section .formkit-checkboxes label {
+    color: var(--text) !important;
+}
+/* First three = general subscriptions */
+.newsletter-section .formkit-checkboxes:nth-of-type(-n + 3) {
+    grid-column: 1 / -1;
+}
+
+/*! ici  */
+.newsletter-section .formkit-checkboxes:nth-of-type(4),
+.newsletter-section .formkit-checkboxes:nth-of-type(5) {
+    margin-top: 2.5rem !important;
+}
+
+.newsletter-section .formkit-checkboxes:nth-of-type(4) {
+    position: relative;
+}
+
+.newsletter-section .formkit-checkboxes:nth-of-type(4)::before {
+    content: "PROJECTS";
+    position: absolute;
+    left: 0;
+    bottom: calc(100% + 0.6rem);
+
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+/*! là  */
+
+/* ========================================
+   KIT CREDIT
+   ======================================== */
+
+.newsletter-section .formkit-powered-by-convertkit-container {
+    grid-column: 1 / -1;
+    opacity: 0.5;
+}
+
+.newsletter-details summary {
+    display: inline-block;
+    padding: 0.9rem 1.4rem;
+    color: var(--gold-light);
+    border: 1px solid var(--gold);
+    cursor: pointer;
+    list-style: none;
+}
+
+.newsletter-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.newsletter-details summary:hover {
+    background: var(--gold);
+    color: #000;
+}
+
+.newsletter-content {
+    margin-top: 2rem;
+}
+
+.newsletter-details {
+    text-align: center;
+}
+
+.newsletter-details > summary {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.newsletter-content > p {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 850px;
+}
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media (max-width: 760px) {
+    .newsletter-section {
+        margin: 4rem auto;
+        padding: 0 1.25rem;
+    }
+
+    .newsletter-section .formkit-fields {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .newsletter-section .formkit-field:first-child,
+    .newsletter-section .formkit-submit,
+    .newsletter-section .formkit-field:nth-child(2) {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .newsletter-section .formkit-submit {
+        width: 100%;
+    }
+
+    .newsletter-section .formkit-form fieldset {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter-section .formkit-checkboxes:nth-of-type(5) {
+        margin-top: 0 !important;
+    }
+}
