@@ -14,11 +14,11 @@
     text-align: center;
 }
 
-.confirmed-mark {
-    margin-bottom: 1.5rem;
-
-    color: var(--gold);
-    font-size: 2rem;
+.confirmed-logo {
+    display: block;
+    width: min(150px, 75vw);
+    height: auto;
+    margin: 0 auto 3rem;
 }
 
 .confirmed-content h1 {
